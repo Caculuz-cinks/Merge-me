@@ -43,15 +43,17 @@ class _SplashState extends State<Splash> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Center(
-                  child: Image(
-                    image: AssetImage('assets/mergemelogo.png'),
-                  ) ,
+                  child: Image.asset('assets/mergemelogo.png',
+                  width: 150,
+                    height: 150,
+                  ),
+
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
                   child: Text('MergeMe',
                     style: TextStyle(
-                      fontSize: 40.0,
+                      fontSize: 35.0,
                       color: Colors.white,
 
                     ),

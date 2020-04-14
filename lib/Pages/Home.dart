@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(left: 40.0, top: 60.0),
+              padding: const EdgeInsets.only(left: 40.0, top: 30.0),
               child: Text('Welcome',
                 style: TextStyle(
                   fontSize: 60.0,
@@ -47,44 +47,39 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            SizedBox(height: 70.0),
+            SizedBox(height: 50.0),
             Center(
               child: Image.asset('assets/mergemelogo.png',
               height: 150,
                 width: 150,
               ),
             ),
-            SizedBox(height: 70.0),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, "/login");
-              },
-              child: ButtonTheme(
-                minWidth: 250.0,
-                height: 55.0,
-                child: Center(
-                  child: RaisedButton(
-                    shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(28.0),
-                      side: BorderSide(color: Colors.blue[900])
+            SizedBox(height: 40.0),
+            ButtonTheme(
+              minWidth: 250.0,
+              height: 55.0,
+              child: Center(
+                child: RaisedButton(
+                  shape: new RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(28.0),
+                    side: BorderSide(color: Colors.blue[900])
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/login");
+                  },
+                  color: Colors.red,
+                  textColor: Colors.white,
+                  child: Text('Login',
+                    style: TextStyle(
+                      fontSize: 35.0,
+                      fontWeight: FontWeight.bold,
                     ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, "/login");
-                    },
-                    color: Colors.red,
-                    textColor: Colors.white,
-                    child: Text('Login',
-                      style: TextStyle(
-                        fontSize: 35.0,
-                        fontWeight: FontWeight.bold,
-                      ),
 
-                    ),
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 40,),
+            SizedBox(height: 10),
             Row(
               children: <Widget>[
                 Padding(
